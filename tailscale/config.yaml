@@ -3,7 +3,7 @@ name: Tailscale
 version: dev
 slug: tailscale
 description: Zero config VPN for building secure networks
-url: https://github.com/hassio-addons/app-tailscale
+url: https://github.com/Chuppa/app-tailscale
 ingress: true
 ingress_port: 0
 ingress_stream: true
@@ -41,12 +41,11 @@ map:
 ports:
   41641/udp: null
 options:
-  accept_dns: true
-  accept_routes: true
-  advertise_exit_node: true
-  advertise_connector: true
-  advertise_routes:
-    - local_subnets
+  accept_dns: false
+  accept_routes: false
+  advertise_exit_node: false
+  advertise_connector: false
+  advertise_routes: []
   always_use_derp: false
   log_level: info
   login_server: "https://controlplane.tailscale.com"
